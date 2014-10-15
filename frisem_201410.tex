@@ -1,0 +1,73 @@
+% Talk about software engineering practices for scientific workflows
+% Ariel Rokem
+% License: CC(http://creativecommons.org/licenses/by-nc-sa/3.0/)
+
+\documentclass{beamer}
+
+\usepackage{ulem}
+\usepackage{listings,bera}
+\usepackage{graphics}
+\usepackage{media9}
+
+\setbeamercovered{transparent}
+\usetheme{CambridgeUS}
+\usecolortheme{beaver}
+\useinnertheme{rectangles}
+
+\definecolor{fore}{RGB}{0,20,30}
+\definecolor{back}{RGB}{255,255,255}
+\definecolor{title}{RGB}{140,21,21}
+
+\setbeamercolor{titlelike}{fg=title}
+\setbeamercolor{normal text}{fg=fore,bg=back}
+\definecolor{keywords}{RGB}{255,0,90}
+\definecolor{comments}{RGB}{60,179,113}
+\definecolor{strings}{RGB}{120,120,0}
+
+\lstset{language=Python,
+keywordstyle=\color{keywords},
+commentstyle=\color{comments}\emph,
+stringstyle=\color{strings}}
+
+\title[Software engineering for scientists]{Software engineering for scientists}
+\subtitle{FriSem}
+
+\author[Ariel Rokem] % (optional, use only with lots of authors)
+{Ariel Rokem}
+\date{October 17, 2014}
+\institute[Stanford University]
+{Stanford University}
+
+% Put in stanford and vista logos:
+\pgfdeclareimage[height=1.5cm]{stanford-logo}{figures/stanford_logo}
+\pgfdeclareimage[height=1.2cm]{vista}{figures/vista}
+\setbeamertemplate{itemize}
+  
+\begin{document}
+
+%Title page:
+\begin{frame}
+  \titlepage
+  \pgfuseimage{stanford-logo}
+  \hfill
+  \pgfuseimage{vista}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Today's presentation}
+\begin{itemize}
+\item
+Version control
+\item
+Testing
+\item
+Code review 
+\item
+\end{itemize}
+\end{frame}
+
+
+
+\end{document}
