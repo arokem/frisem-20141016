@@ -29,10 +29,10 @@ keywordstyle=\color{keywords},
 commentstyle=\color{comments}\emph,
 stringstyle=\color{strings}}
 
-\title[Software engineering for scientists]{Software engineering for scientists}
-\subtitle{FriSem}
+\title[Practical software engineering]{Practical software engineering }
+\subtitle{for psychologists}
 
-\author[Ariel Rokem] % (optional, use only with lots of authors)
+\author[Ariel Rokem]
 {Ariel Rokem}
 \date{October 17, 2014}
 \institute[Stanford University]
@@ -40,7 +40,6 @@ stringstyle=\color{strings}}
 
 % Put in stanford and vista logos:
 \pgfdeclareimage[height=1.5cm]{stanford-logo}{figures/stanford_logo}
-\pgfdeclareimage[height=1.2cm]{vista}{figures/vista}
 \setbeamertemplate{itemize}
   
 \begin{document}
@@ -49,14 +48,11 @@ stringstyle=\color{strings}}
 \begin{frame}
   \titlepage
   \pgfuseimage{stanford-logo}
-  \hfill
-  \pgfuseimage{vista}
 
 \end{frame}
 
-
 \begin{frame}
-\frametitle{"But we're psychologists!''}
+\frametitle{"Dammit Jim, I'm a psychologist, not a programmer!''}
 \begin{itemize}
 \pause
 \item
@@ -66,24 +62,36 @@ Humans are good at many things
 Computers are good at other things
 \pause
 \item
-Automate whatever you can
+Automate everything you can
+\pause
+\item
+Now, we've settled that, how can we make sure we do it well? 
 \end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{We can learn from the engineers}
+\frametitle{Make your life easier}
 \pause
- Heck, we do it all the time
+And your results easier to reproduce
 \end{frame}
 
 \begin{frame}
-\frametitle{Today's presentation}
+\pause
+Reproducibility is collaborating with someone you don't yet know
+\pause 
+... Yourself in a couple of months, for example
+\end{frame}
+
+\begin{frame}
+\frametitle{3 practices you can adopt}
 \begin{itemize}
 \pause
 \item
 Version control
+\pause
 \item
 Testing
+\pause
 \item
 Code review 
 \end{itemize}
@@ -96,13 +104,13 @@ Who uses version control?
 
 \begin{frame}
 \frametitle{We all do}
-% \includegraphics[height=5.7cm]{figures/phd}
-%"https://raw.github.com/karthikram/git_intro/master/img/vcs_for_science.png
+ \includegraphics[height=5.7cm]{figures/vcs_for_science.png}
 \end{frame}
+
 
 \begin{frame}
 \frametitle{Wouldn't you rather be more systematic?}
-The software engineers have solved this problem for us
+There are many Version Control Systems
 \begin{itemize}
 \pause
 \item
@@ -115,5 +123,173 @@ CVS
 GIT
 \end{itemize}
 \end{frame}
+
+
+\begin{frame}
+\frametitle{Git}
+Created by Linus Torvalds
+\begin{itemize}
+\pause
+\item
+Distributed
+\pause
+\item
+Fast 
+\pause
+\item
+In very common use
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Under the hood}
+Git keeps snapshots of your file system
+\includegraphics[height=2cm]{figures/git1.pdf}
+\end{frame}
+
+\begin{frame}
+\frametitle{Under the hood}
+You can revert back to a previous version
+\includegraphics[height=2cm]{figures/git1.pdf}
+\end{frame}
+
+\begin{frame}
+\frametitle{Easy to branch}
+This is a way to try out new ideas
+\includegraphics[height=4cm]{figures/git2.pdf}
+\pause
+\\
+Without worrying you might break something
+\end{frame}
+
+\begin{frame}
+\frametitle{Collaboration is easy}
+\begin{itemize}
+\pause
+\item
+Github 
+\pause
+\item
+\href{https://education.github.com/}{Github for students}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Version everything!}
+\begin{itemize}
+\pause
+\item
+Code
+\pause
+\item
+Papers
+\pause
+\item
+Even presentations
+\pause
+\item
+\href{https://github.com/arokem/frisem-20141016}{This talk}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\end{frame}
+
+\begin{frame}
+\frametitle{Code review}
+\begin{itemize}
+\pause
+\item
+Rigor
+\pause
+\item
+Reusability
+\pause
+\item
+Knowledge transfer
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{How to make review work (author)}
+\begin{itemize}
+\pause
+\item
+ Less than 200 loc
+\pause
+\item 
+ Digestible, coherent piece of code
+\pause
+\item
+ Explain in advance what you are trying to achieve
+\pause
+\item 
+ Write tests
+\pause
+\item
+ Readability counts!\footnotemark[1]
+\end{itemize}
+\footnotetext[1]{\href{http://legacy.python.org/dev/peps/pep-0020/}{The zen of python}}
+\end{frame}
+
+\begin{frame}
+\frametitle{How to make review work (reviewer)}
+\begin{itemize}
+\pause
+\item 
+Don't forget to be positive
+\pause
+\item 
+Readability counts! 
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Modes of code review}
+\begin{itemize}
+\pause
+\item
+Asynchronous 
+\pause
+\item
+Synchronous 
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Asynchronous: github pull requests}
+\end{frame}
+
+\begin{frame}
+\frametitle{Synchronous: journal club/lab meeting for code}
+\begin{itemize}
+\pause
+\item
+Rob Knight, CU Boulder \footnotemark[1]
+\pause
+\item
+Code is sent in advance (through github?)
+\pause
+\item 
+Project on a screen and fire away!
+\end{itemize}
+\footnotetext[1]{$http://fperez.org/py4science/code\_reviews.html$}
+\end{frame}
+
+\begin{frame}
+\frametitle{When in doubt}
+\includegraphics[height=5.7cm]{figures/review_meetings.png}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{OK, we want to learn}
+But who's going to teach us?
+\end{frame}
+
+
 
 \end{document}
