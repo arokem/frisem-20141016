@@ -98,6 +98,18 @@ Code review
 \end{frame}
 
 \begin{frame}
+\frametitle{3 practices you can adopt}
+\begin{itemize}
+\item
+\emph{Version control}
+\item
+Testing
+\item
+Code review 
+\end{itemize}
+\end{frame}
+
+\begin{frame}
 \frametitle{Version control}
 Who uses version control?
 \end{frame}
@@ -186,6 +198,9 @@ Code
 Papers
 \pause
 \item
+Data (of reasonable size)
+\pause 
+\item
 Even presentations
 \pause
 \item
@@ -195,7 +210,102 @@ Even presentations
 
 
 \begin{frame}
+\frametitle{3 practices you can adopt}
+\begin{itemize}
+\item
+Version control
+\item
+\emph{Testing}
+\item
+Code review 
+\end{itemize}
 \end{frame}
+
+
+\begin{frame}
+\frametitle{Automated testing}
+How do you know your code does what it's supposed to do?
+\pause
+How do you prevent bugs from recurring?
+\pause 
+How do you avoid breaking old functions, when building new ones?
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Assert simple test cases}
+\begin{lstlisting}
+def circle_diameter(radius):
+  return(2 * pi * radius)
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Assert simple test cases}
+\begin{lstlisting}
+
+def test_circle_diameter(radius):
+    assert circle_diameter(2) == 2 * pi
+
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Assert simple test cases}
+If it gets those wrong -- 
+\\ 
+it certainly will not do well with more complicated things!
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Assert your old results}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Assert fixes to bugs}
+Those tend to creep back in somehow 
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Good tests}
+\begin{itemize}
+\pause
+\item
+Validation
+\pause
+\item
+Avoid regressions
+\pause
+\item
+Documentation
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Good tests}
+Don't let this happen to you
+\\
+\includegraphics[height=6cm]{figures/lack_of_tests.jpg}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{3 practices you can adopt}
+\begin{itemize}
+\item
+Version control
+\item
+Testing
+\item
+\emph{Code review}
+\end{itemize}
+\end{frame}
+
 
 \begin{frame}
 \frametitle{Code review}
@@ -240,12 +350,24 @@ Knowledge transfer
 \begin{itemize}
 \pause
 \item 
+Have clear standards
+\pause 
+\item 
+Don't accept broken windows and technical debt
+\pause
+\item 
 Don't forget to be positive
 \pause
 \item 
 Readability counts! 
 \end{itemize}
 \end{frame}
+
+\begin{frame}
+\frametitle{Take breaks}
+\includegraphics[height=6cm]{figures/review_errors}
+\end{frame}
+
 
 \begin{frame}
 \frametitle{Modes of code review}
@@ -261,6 +383,23 @@ Synchronous
 
 \begin{frame}
 \frametitle{Asynchronous: github pull requests}
+\begin{itemize}
+\pause
+\item
+Author creates a branch with proposed changes 
+\pauses
+\item
+Author submits Pull Request through the web interface
+\pause
+\item
+Reviewer reads and comments
+\pause
+\item
+Author revises code
+\pause
+\item
+Et cetera
+\end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -276,7 +415,8 @@ Code is sent in advance (through github?)
 \item 
 Project on a screen and fire away!
 \end{itemize}
-\footnotetext[1]{$http://fperez.org/py4science/code\_reviews.html$}
+\footnotetext[1]{\href{http://fperez.org/py4science/code_reviews.html}{h/t Fernando
+  Perez}}
 \end{frame}
 
 \begin{frame}
@@ -284,12 +424,19 @@ Project on a screen and fire away!
 \includegraphics[height=5.7cm]{figures/review_meetings.png}
 \end{frame}
 
-
 \begin{frame}
-\frametitle{OK, we want to learn}
-But who's going to teach us?
-\end{frame}
+\frametitle{Final thoughts}
+\begin{itemize}
+\pause
+\item
+Don't let the perfect be the enemy of the good
 
+\pause
+\item
+Don't let the perfect be the enemy of the good
+
+\end{itemize}
+\end{frame}
 
 
 \end{document}
