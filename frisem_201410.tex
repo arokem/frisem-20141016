@@ -119,22 +119,21 @@ Who uses version control?
  \includegraphics[height=5.7cm]{figures/vcs_for_science.png}
 \end{frame}
 
-
-\begin{frame}
-\frametitle{Wouldn't you rather be more systematic?}
-There are many Version Control Systems
-\begin{itemize}
-\pause
-\item
-SVN
-\pause
-\item
-CVS 
-\pause
-\item
-GIT
-\end{itemize}
-\end{frame}
+%\begin{frame}
+%\frametitle{Wouldn't you rather be more systematic?}
+%There are many Version Control Systems
+%\begin{itemize}
+%\pause
+%\item
+%SVN
+%\pause
+%\item
+%CVS 
+%\pause
+%\item
+%GIT
+%\end{itemize}
+%\end{frame}
 
 
 \begin{frame}
@@ -306,6 +305,10 @@ Avoid regressions
 \pause
 \item
 Documentation
+\pause
+\item
+Helps refactoring - start with a simple/inefficient implementation and refactor
+until the tests pass
 \end{itemize}
 \end{frame}
 
@@ -315,6 +318,12 @@ Don't let this happen to you
 \\
 \includegraphics[height=6cm]{figures/lack_of_tests.jpg}
 \end{frame}
+
+\begin{frame}
+\frametitle{Test-driven programming}
+Consider writing your tests before you write the code
+\end{frame}
+
 
 \begin{frame}
 \frametitle{Continuous integration}
@@ -353,6 +362,12 @@ Knowledge transfer
 \end{frame}
 
 \begin{frame}
+\frametitle{I know my code best!}
+\includegraphics[height=6cm]{figures/two_heads_better_than_one.png}
+
+\end{frame}
+
+\begin{frame}
 \frametitle{How to make review work (author)}
 \begin{itemize}
 \pause
@@ -367,7 +382,7 @@ Not too large
 
 \begin{frame}
 \frametitle{How to make review work (author)}
-\includegraphics[height=6cm]{figures/code_review_efficiency.png}
+\includegraphics[height=6cm]{figures/small_code_review.png}
 \end{frame}
 
 
@@ -454,6 +469,8 @@ Et cetera
 \pause
 \item
 Rob Knight, CU Boulder \footnotemark[1]
+\footnotetext[1]{\href{http://fperez.org/py4science/code_reviews.html}{h/t Fernando
+  Perez}}
 \pause
 \item
 Code is sent in advance (through github?)
@@ -461,8 +478,6 @@ Code is sent in advance (through github?)
 \item 
 Project on a screen and fire away!
 \end{itemize}
-\footnotetext[1]{\href{http://fperez.org/py4science/code_reviews.html}{h/t Fernando
-  Perez}}
 \end{frame}
 
 \begin{frame}
@@ -476,16 +491,16 @@ Project on a screen and fire away!
 \pause
 \item
 Don't let the perfect be the enemy of the good
-
+\\
+``Imperfect tests, run frequently, are much better than perfect tests that are
+never written at all''\footnotemark[1]
+\footnotetext[1]{\href{http://www.martinfowler.com/articles/continuousIntegration.html}{Martin Fowler}}
 \pause
 \item
 Should this be part of the curriculum?
-
 \pause
 \item
 There are a lot of resources out there
-
-
 \end{itemize}
 \end{frame}
 
